@@ -17,6 +17,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ * Leitura e Mapeamento de dados provenientes do arquivo .json
+ * Camada de simulação - implementação da integração com sistema legado.
+ * @author allanguerra
+ */
 @Component
 public class LegacyReader implements LegacyFacade {
 
@@ -38,12 +43,10 @@ public class LegacyReader implements LegacyFacade {
             String json = String.join(" ",
                     Files.readAllLines(path, StandardCharsets.UTF_8));
 
-            //Mapear Arquivo
+            // Mapear Arquivo
             extratoLancamentoCliente = mapper.readValue(json, ExtratoLancamentoCliente.class);
 
-            //Verificar Mapeamento
-
-            //Retornar
+            // Retornar
             return extratoLancamentoCliente;
 
         } catch (JsonProcessingException e) {

@@ -19,6 +19,10 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.*;
 
+/**
+ * Classe de testes de integração para a camada de controle da aplicação. {@link ExtratoLancamentoEmContaController}
+ * @author allanguerra
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ExtratoLancamentoEmContaControllerTest {

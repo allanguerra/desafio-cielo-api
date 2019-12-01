@@ -4,6 +4,10 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * Mapeamento do Sistema Legado - Controle de Lançamentos
+ * @author allanguerra
+ */
 @Data
 public class ControleLancamento {
 

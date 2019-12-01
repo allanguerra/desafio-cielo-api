@@ -4,6 +4,10 @@ import lombok.Data;
 
 import java.util.List;
 
+/**
+ * Mapeamento do Sistema Legado - Lançamentos na Conta Corrente do Cliente.
+ * @author allanguerra
+ */
 @Data
 public class LancamentoContaCorrenteCliente {
 

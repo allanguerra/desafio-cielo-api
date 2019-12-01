@@ -3,6 +3,10 @@ package com.cielo.api.desafiocielo.infra.exceptions;
 import com.cielo.api.desafiocielo.infra.exceptions.enums.ErrorType;
 import lombok.Getter;
 
+/**
+ * Excessão para erros de leitura do arquivo .json.
+ * @author allanguerra
+ */
 @Getter
 public class FileException extends RuntimeException {
 

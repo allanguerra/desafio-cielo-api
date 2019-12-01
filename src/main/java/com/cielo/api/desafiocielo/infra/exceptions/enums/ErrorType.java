@@ -2,6 +2,10 @@ package com.cielo.api.desafiocielo.infra.exceptions.enums;
 
 import lombok.Getter;
 
+/**
+ * Enumerador para erros.
+ * @author allanguerra
+ */
 @Getter
 public enum ErrorType {
 

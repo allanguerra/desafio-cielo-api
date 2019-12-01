@@ -5,6 +5,10 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * DTO para enviar dados para a View.
+ * @author allanguerra.
+ */
 @Data
 public class ExtratoLancamentoEmContaDTO {
 

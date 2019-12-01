@@ -2,6 +2,10 @@ package com.cielo.api.desafiocielo.domain.payload;
 
 import lombok.Data;
 
+/**
+ * Mapeamento do Sistema Legado - Total do Controle de Lançamentos.
+ * @author allanguerra
+ */
 @Data
 public class TotalControleLancamento {
 

@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/**
+ * Camade de controle da aplicação.
+ * Recebe e Responde requisições.
+ * @author allanguerra
+ */
 @RestController
 @RequestMapping(value = "/extrato-lancamento")
 public class ExtratoLancamentoEmContaController {

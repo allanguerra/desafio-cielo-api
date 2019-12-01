@@ -11,6 +11,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Camade de serviço, processa dados recebidos da integração com o sistema legado.
+ * @author allanguerra
+ */
 @Service
 public class ExtratoLancamentoEmContaService {
 

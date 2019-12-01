@@ -13,6 +13,10 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.*;
 
+/**
+ * Classe de testes unitários para a camada de serviços da aplicação. {@link ExtratoLancamentoEmContaService}
+ * @author allanguerra
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ExtratoLancamentoEmContaServiceTest {

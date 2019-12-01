@@ -2,6 +2,10 @@ package com.cielo.api.desafiocielo.infra;
 
 import lombok.Data;
 
+/**
+ * Objeto para abstração de erros causados na aplicação.
+ * @author allanguerra
+ */
 @Data
 public class StandardError {
 

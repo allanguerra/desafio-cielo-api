@@ -2,6 +2,10 @@ package com.cielo.api.desafiocielo.domain.payload;
 
 import lombok.Data;
 
+/**
+ * Mapeamento do Sistema Legado - Dados do Domicílio Bancário.
+ * @author allanguerra
+ */
 @Data
 public class DadosDomicilioBancario {
 

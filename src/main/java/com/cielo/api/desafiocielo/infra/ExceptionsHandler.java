@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Calendar;
 
+/**
+ * Camada de gerenciamento de excessões da aplicação.
+ * @author allanguerra
+ */
 @ControllerAdvice
 public class ExceptionsHandler {
 
