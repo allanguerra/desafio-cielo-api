@@ -1,22 +1,33 @@
 package com.cielo.api.desafiocielo.controllers;
 
+import com.cielo.api.desafiocielo.domain.dto.ExtratoLancamentoEmContaDTO;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ErrorCollector;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.servlet.MockMvc;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import java.util.List;
+
+import static org.hamcrest.CoreMatchers.*;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(ExtratoLancamentoEmContaController.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ExtratoLancamentoEmContaControllerTest {
 
     @Autowired
-    private MockMvc mockMvc;
+    private TestRestTemplate testRestTemplate;
+
+    @Rule
+    public ErrorCollector error = new ErrorCollector();
 
     /*
     Test Methods
@@ -25,8 +36,14 @@ public class ExtratoLancamentoEmContaControllerTest {
     @Test
     public void DeveRetornarStatus200AoObterExtratoDeLancamentosEmConta() throws Exception {
 
-        mockMvc.perform(get("/extrato-lancamento")
-            .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isOk());
+        ParameterizedTypeReference<List<ExtratoLancamentoEmContaDTO>> typeReference =
+                new ParameterizedTypeReference<List<ExtratoLancamentoEmContaDTO>>() {};
+
+        ResponseEntity<List<ExtratoLancamentoEmContaDTO>> response =
+                testRestTemplate.exchange("/extrato-lancamento", HttpMethod.GET, null, typeReference);
+
+        error.checkThat(response.getStatusCode(), is(HttpStatus.OK));
+        error.checkThat(response.getHeaders().getContentType(), is(MediaType.APPLICATION_JSON));
+        error.checkThat(response.getBody().size(), is(not(0)));
     }
 }

@@ -35,7 +35,7 @@ public class ExtratoLancamentoEmContaDTO {
         this.situacao = controleLancamento.getLancamentoContaCorrenteCliente().getNomeSituacaoRemessa();
         this.dataConfirmacao = controleLancamento.getDateEfetivaLancamento();
         this.dadosBancarios = String.format("%s Ag: %s CC: %s",
-                controleLancamento.getNomeBanco(),
+                controleLancamento.getNomeBanco().trim(),
                 controleLancamento.getLancamentoContaCorrenteCliente().getDadosDomicilioBancario().getNumeroAgencia(),
                 controleLancamento.getLancamentoContaCorrenteCliente().getDadosDomicilioBancario().getNumeroContaCorrente());
         this.valorFinal = controleLancamento.getValorLancamentoRemessa();

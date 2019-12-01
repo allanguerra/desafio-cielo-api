@@ -1,11 +1,6 @@
 package com.cielo.api.desafiocielo.services;
 
 import com.cielo.api.desafiocielo.domain.dto.ExtratoLancamentoEmContaDTO;
-import static org.junit.Assert.*;
-
-import static org.hamcrest.CoreMatchers.*;
-
-import org.hamcrest.CoreMatchers;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ErrorCollector;
@@ -15,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
+
+import static org.hamcrest.CoreMatchers.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
